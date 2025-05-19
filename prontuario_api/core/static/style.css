@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e6f0ff;
+}
+
+.phone-container {
+    width: 360px;
+    border-radius: 20px;
+    border: 4px solid #1c37bf;
+    background-color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #1c37bf;
+    color: white;
+}
+
+.app-logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.app-logo i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+}
+
+.app-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 20px 15px 10px;
+    color: #333;
+}
+
+.form-container {
+    padding: 0 15px 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #1c37bf;
+    color: white;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button.secondary {
+    background-color: #555;
+}
+
+.button-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#resultado img {
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 2px solid #1c37bf;
+}
+
+#resultado {
+  margin-top: 15px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#qrCodeImagem {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #1c37bf;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.form-title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 20px 0 10px;
+    color: #1c37bf;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 60px;
+}
+
+label.required::after {
+  content: " *";
+  color: #d00;
+  margin-left: 2px;
+}
+
+/* INPUTS inválidos ficam com borda vermelha */
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
+  border-color: #d00;
+}
+
+/* INPUTS válidos ficam com borda verde */
+input:required:valid,
+select:required:valid,
+textarea:required:valid {
+  border-color: #0a0;
+}
+
+/* mensagem de erro pequena (opcional) */
+.form-group .error-msg {
+  display: none;
+  color: #d00;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+/* se quiser mostrar um span.error-msg quando inválido: */
+input:required:invalid + .error-msg,
+select:required:invalid + .error-msg,
+textarea:required:invalid + .error-msg {
+  display: block;
+}
